@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+![Logo-nav](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/Kalvium-Logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kalvium Lab 
 
-## Available Scripts
+## Learning Goals
 
-In the project directory, you can run:
+In this exercise, the goal is to understand and experiment around props - using both class and functional components. 
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Fork this repo
+2. Clone this repo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Whenever you create a first significant change, you should make your first commit.
 
-### `npm test`
+3. Follow these [guidelines to add, commit and push changes](https://github.com/FACEPrep-ProGrad/general-guidelines-labs-project-builders.git).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In the end of this document, you will find guidelines on how to submit the exercise.
 
-### `npm run build`
+### Introduction
+The task is to create a webpage which looks like the image below:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/lab-react-jsx.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Before this lab:
+It is very important that you come to this lab -- only after you have completed the previous lab - which is -->
+`lab-react-jsx-boilerplate` -> as this lab is a continous lab of that.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps to follow:
 
-### `npm run eject`
+For this exercise too, you have to make a webpage which looks like the above image.
+But this time, let's make some changes in the structure of our application. As you might have observed in the previous lab -- that we were creating data in both `App.js` and `AppClass.js` files. But the data used was the same for both the files. So, if the data is same for both the files, then why to create data twice.
+In order to overcome this situation - we will be using `props`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can clone the previous project (`lab-react-jsx-boilerplate`) again, and then follow the following steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. From both `App.js` and `AppClass.js` files, remove the part where you were creating the data i.e:
+   1. Remove the following code from `App.js`:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+        ```js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+        const imageData = ()=>{
+        let data = [
+          {
+            id:1,
+            img:elephant
+          },
+          {
+            id:2,
+            img:elephant
+          },
+          {
+            id:3,
+            img:elephant
+          },
+          {
+            id:4,
+            img:elephant
+          }
+        ]
+        return data;
+      }
 
-## Learn More
+      ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  2. Remove the following code from `AppClass.js`:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+      ```js
 
-### Code Splitting
+      imageData = ()=>{
+        let data = [
+          {
+            id:1,
+            img:elephant
+          },
+          {
+            id:2,
+            img:elephant
+          },
+          {
+            id:3,
+            img:elephant
+          },
+          {
+            id:4,
+            img:elephant
+          }
+        ]
+        return data;
+      }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```
 
-### Analyzing the Bundle Size
+2. Now, create a folder `components` and inside this folder create a file `DataComponent.js`. Add your data in this file.
+Your file structure should look like this:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/file-structure.png)
 
-### Making a Progressive Web App
+3. Now use `props` to get data inside your `App.js` and `AppClass.js` files.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy Coding Kalvium ❤️!
